@@ -1,0 +1,18 @@
+React is a javascript library which doesnt follow as pattern to create, meaning developer can follow structure based on their preferences. Originally developed and maintained by Facebook.
+
+React is a Single-Page Application..
+-Single page applications (SPAs) load only one HTML page and dynamically update the content as the user interacts with the app, without reloading the entire page. This approach can lead to faster, more responsive applications.
+-SPAs heavily use JavaScript to manage the application's state and render content. Instead of requesting new HTML pages from the server, SPAs use JavaScript to manipulate the DOM and fetch data asynchronously. This is often done using libraries and frameworks like React, Vue, or Angular, which provide great tools for building complex user interfaces.
+
+Challenges in Single-Page Application?
+-SPAs have some common issues. One significant issue is that screen readers may struggle with dynamically updated content. When content changes without a page reload/refresh, screen readers might not notify these changes, which makes our users unaware of updates on our web app.
+-Another challenge with SPAs is with navigation and browser history. Users expect the back and forward buttons to work as they do on traditional websites. This might not work properly in SPAs because technically, the URL of the web app doesn’t change. Since the URL of the web app doesn’t change, they can’t bookmark any specific page. Refreshing the page might reset the application to its initial state, rather than maintaining the current view.
+-SPAs can pose challenges for SEO optimization. Search engines like Google can have difficulty indexing dynamically loaded content because they may not execute JavaScript properly or may miss content that isn’t included in the initial HTML page. This can lead to pages not being indexed correctly.
+-However, modern search engines have improved their ability to crawl SPAs, and there are techniques such as server-side rendering (SSR), pre-rendering, and the use of SEO-friendly URLs that can help mitigate these issues and improve SEO for SPAs.
+
+Features of React?
+1.Single Page Application
+2.Reusable UI components.
+3.Virtual DOM
+4.
+
