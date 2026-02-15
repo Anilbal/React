@@ -40,8 +40,8 @@ This is my hands-on learning space for mastering React. I'm building various com
 
 1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd <your-project-name>
+git clone https://github.com/Anilbal/React.git
+cd React
 ```
 
 2. Install dependencies
@@ -127,11 +127,6 @@ Builds the app for production
 - [ ] Create a full project
 - [ ] Deploy to production
 
-## 📧 Contact
-
-Feel free to reach out if you have learning resources or tips to share!
-
----
 
 **Happy Learning! 🎉**
 
