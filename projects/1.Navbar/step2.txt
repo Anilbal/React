@@ -1,0 +1,7 @@
+// here i am create Navbar with nav elements as its return elements with className as navbar. Note: class is reserved word in js so we are using className instead.
+
+export function Navbar(){
+    return (
+        <nav className="navbar"></nav>
+    )
+}
