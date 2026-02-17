@@ -1,0 +1,15 @@
+How Can You Import and Export Components in React?
+-Import components in react means using that components in another components or file and export means making that components to be used for another file where we have imported.
+
+while export we have two ways:
+```
+export default function Name(){}
+
+const Name=()=>{}
+export default Name;
+```
+
+while import we have to import components like this:
+```
+import Name from "./Name.jsx"
+```
