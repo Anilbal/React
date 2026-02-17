@@ -1,0 +1,17 @@
+// adding another a tag into second li tag with href # and text with Widgets
+
+export const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <ul>
+        <li className="nav-item">
+          <a href='#'>Dashboard</a>
+        </li>
+        <li className="nav-item">
+            <a href="#">Widgets</a>
+        </li>
+        <li className="nav-item"></li>
+      </ul>
+    </nav>
+  )
+}
