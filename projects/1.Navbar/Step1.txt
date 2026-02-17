@@ -1,0 +1,7 @@
+// Here i am learning on how react functional compoenents starts
+
+export function Navbar(){
+    return (
+        <h1>This is navbar</h1>
+    )
+}
