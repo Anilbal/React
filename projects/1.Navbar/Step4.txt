@@ -1,0 +1,13 @@
+// here add className nav-item to each li tag
+
+export const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <ul>
+        <li className="nav-item"></li>
+        <li className="nav-item"></li>
+        <li className="nav-item"></li>
+      </ul>
+    </nav>
+  )
+}
