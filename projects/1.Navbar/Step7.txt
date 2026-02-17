@@ -1,0 +1,21 @@
+// creating button in third li tag and adding aria-expanded attributes as false and text with Apps inside of button tag
+
+export const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <ul>
+        <li className="nav-item">
+          <a href='#'>Dashboard</a>
+        </li>
+        <li className="nav-item">
+          <a href="#">Widgets</a>
+        </li>
+        <li className="nav-item">
+          <button aria-expanded="false">
+          Apps
+          </button>
+        </li>
+      </ul>
+    </nav>
+  )
+}
