@@ -1,0 +1,16 @@
+Components are the building blocks of React applications that allow developers to break down complex user interfaces into smaller, manageable pieces, making it easier to develop and maintain large-scale applications.
+
+The two types of components in React are functional and class-based components. In modern React, developers will use functional components and all of the examples we look at today will be functional components.
+
+At a higher level, you can think of components like JavaScript functions that return elements describing the UI.This UI is described using JSX, a syntax extension for JavaScript that looks similar to HTML but allows you to write UI elements in a more declarative way.
+
+But why are we using className instead of class like with regular HTML elements?
+Well, this is because in JavaScript, class is a reserved name. So, we need to use className instead.
+
+Another thing you might have noticed is that we are using a capital letter at the beginning of the component name. But why can’t we use all lower case letters?
+This is because React treats components with a capital letter as custom components, while elements with lowercase letters are considered built-in HTML elements.
+For example:When React encounters a lowercase tag, like <div> or <span>, it assumes it's a standard HTML element. However, if the component name starts with a capital letter, React will treat it as a user-defined component and render it accordingly. This distinction helps React differentiate between native HTML tags and components that you create.
+
+There seems to be an error message instead. The error message says Adjacent JSX elements must be wrapped in an enclosing tag.
+The reason why you are getting that error message is because multiple sibling elements need to be wrapped in a parent element. While you could wrap the h1 and p elements in a simple div, there is another way to silence the error.
+React fragments are used to group elements together.
