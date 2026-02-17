@@ -1,0 +1,30 @@
+export function Footer(){
+  return (
+    <footer>
+    <ul>
+    <li>Fitness Dashboard</li>
+    <li>Fitness Dashboard</li>
+    </ul>
+    <ul>
+    <li>Fitness Dashboard</li>
+    <li>Fitness Dashboard</li>
+    </ul>
+    <ul>
+    <li>Fitness Dashboard</li>
+    <li>Fitness Dashboard</li>
+    </ul>
+    <p>© 2024 Fitness Dashboard. All Rights Reserved.</p>
+    <ul>
+    <li>
+    <a href="#">games</a>
+    </li>
+    <li>
+    <a href="#">vidoes</a>
+    </li>
+    <li>
+    <a href="#">music</a>
+    </li>
+    </ul>
+    </footer>
+  )
+}
