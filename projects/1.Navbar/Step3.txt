@@ -1,0 +1,13 @@
+// creating ul tag inside of nav element in Navbar Component and inside of ul tag there will be three lists.
+
+export function Navbar(){
+    return (
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    )
+}
