@@ -1,0 +1,14 @@
+Vite?
+-Vite, which means "fast" in French, is a build tool that aims to provide a faster development experience for modern web projects. Vite can be used with React, as well as with other libraries and frameworks like Vue or Svelte. You can even use it with vanilla JavaScript projects.
+
+Command to create boilerplate for react:
+npm create vite@latest my-react-app -- --template react
+
+why we need npm install?
+-The npm install command is used to install the dependencies needed to properly run your React project. Dependencies are libraries or packages that your React project requires in order to function correctly, such as React itself, ReactDOM, or other third-party packages that provide additional functionality.
+
+-Running npm install will read the package.json file in your project directory and install all the dependencies listed there, allowing you to build and run your React app without missing any necessary components.
+
+-The package.json file is a key configuration file in projects that contains metadata about your project, including its name, version, and dependencies. It also defines scripts, licensing information, and other settings that help manage the project and its dependencies.
+
+-The node_modules folder is where all the packages and libraries required by your project are stored. This folder contains the actual code for the dependencies listed in your package.json file, including both your project's direct dependencies and any dependencies of those dependencies.
