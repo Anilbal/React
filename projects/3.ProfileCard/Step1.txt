@@ -1,0 +1,5 @@
+// creating Card components which accepst name, title and bio as props
+
+export function Card({name,title,bio}){
+    return ("");
+}
