@@ -5,3 +5,4 @@ In React, state is treated as immutable so it can recognize changes and make the
 
 One of the most common mistakes when updating arrays in a React state is to directly modify the array using methods like push(), pop(), or splice(). These methods mutate the original array, and React does not allow that.
 
+React relies on a new array reference to detect changes, so directly modifying the array can prevent the component from re-rendering as expected.
