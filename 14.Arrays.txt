@@ -1,0 +1,2 @@
+How Do You Update Arrays in State?
+In React, updating arrays in state is quite straightforward, but it can be easy to make a mistake, especially if you're coming from vanilla JavaScript where you can modify arrays directly.
