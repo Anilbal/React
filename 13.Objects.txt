@@ -43,3 +43,13 @@ const handleAgeChange = (e) => {
     age: e.target.value,
   });
 };
+
+To do this, you can pass a special function called an updater function to your setter function, setUser. The updater function takes the pending state as an argument, here, called prevUser, and should return the next state:
+const handleAgeChange = (e) => {
+  setUser((prevUser) => {
+    const updatedUser = { ...prevUser, age: e.target.value };
+    console.log('Previous State:', prevUser);
+    console.log('Updated State:', updatedUser);
+    return updatedUser;
+  });
+};
