@@ -59,3 +59,5 @@ const addItem = () => {
   setItems((prevItems) => [...prevItems, newItem]);
 };
 
+[...prevItems, newItem] creates a new array by copying all items in the existing items array held in state, then adds newItem at the end, which increments the id and the item number.
+
