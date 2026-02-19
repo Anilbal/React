@@ -36,3 +36,26 @@ function ItemsList() {
 }
 
 export default ItemsList;
+
+If you click the Add Item button, nothing happens in the user interface.
+
+It might also be tempting to remove items from the array with the pop() method:
+const removeItem = () => {
+  items.pop(); // Modifies the original array
+  setItems(items); // React will not detect this change, either
+};
+To update an array in state, the key is to create a new array, do your operations, and pass that to React, rather than mutate the existing array.
+
+Because it's a new array, React will know that the state has been changed, and trigger a re-render.
+
+Here's how you can add to the items array using the spread operator:
+const addItem = () => {
+  const newItem = {
+    id: items.length + 1,
+    name: `Item ${items.length + 1}`,
+  };
+
+  // Creates a new array
+  setItems((prevItems) => [...prevItems, newItem]);
+};
+
