@@ -1,0 +1,19 @@
+Events in  React?
+Event handling is an essential part of every interactive website.
+
+In React, event handlers work in a similar way to native browser events, but with a few tweaks.
+
+Instead of using lowercase event attribute names like onclick and onsubmit, React uses camelCase, like onClick and onSubmit.
+
+The event handler function is passed to the element as a prop, and the event type like onClick or onSubmit is used as an attribute in JSX.
+Here is a reminder of how to work with a click event in regular HTML:
+<button onclick="alert('Button clicked!')">Click Me</button>
+
+And here is how you do the same in React:
+function handleClick() {
+  console.log("Button clicked!");
+}
+<button onClick={handleClick}>Click Me</button>;
+
+In React, event handler functions usually start with the prefix handle to indicate they are responsible for handling events, like handleClick or handleSubmit.
+
