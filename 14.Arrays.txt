@@ -2,3 +2,6 @@ How Do You Update Arrays in State?
 In React, updating arrays in state is quite straightforward, but it can be easy to make a mistake, especially if you're coming from vanilla JavaScript where you can modify arrays directly.
 
 In React, state is treated as immutable so it can recognize changes and make the proper updates to the user interface.
+
+One of the most common mistakes when updating arrays in a React state is to directly modify the array using methods like push(), pop(), or splice(). These methods mutate the original array, and React does not allow that.
+
