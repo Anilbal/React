@@ -1,0 +1,45 @@
+// How Do You Update Objects in State?
+Updating objects in state in React can be tricky if you're used to changing object property values directly.
+
+React treats state as immutable, meaning you should not modify it directly.
+
+Let's say you have an object in your component state that represents a user's profile, and you want the user to update their age:
+
+import { useState } from "react";
+
+function Profile() {
+  const [user, setUser] = useState({
+    name: "John Doe",
+    age: 31,
+    city: "LA",
+  });
+
+  // Change user age directly
+  const handleAgeChange = (e) => {
+    user.age = e.target.value;
+    console.log(user);
+  };
+
+  return (
+    <div>
+      <h1>User Profile</h1>
+      <p>Name: {user.name}</p>
+      <p>Age: {user.age}</p>
+      <p>City: {user.city}</p>
+
+      <h2>Update User Age </h2>
+      <input type="number" value={user.age} onChange={handleAgeChange} />
+    </div>
+  );
+}
+
+export default Profile;
+
+This code will not work because you're directly modifying the user.age property.Even though console.log(user) will show the new age in the console, React won't re-render the component to show it in the user interface because you didn't use the setter function, setUser.
+
+To update an object directly in the state, you need to use the setter function to create a new object with the updated value. For example:
+const handleAgeChange = (e) => {
+  setUser({
+    age: e.target.value,
+  });
+};
