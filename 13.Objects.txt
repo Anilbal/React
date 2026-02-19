@@ -53,3 +53,65 @@ const handleAgeChange = (e) => {
     return updatedUser;
   });
 };
+As you can see, we create a new user object called updatedUser by using the spread syntax to copy the pending user object, ...prevUser. We then update the age based on the form input and return updatedUser at the bottom of the function as the next state.
+
+Now your project works as expected, and updates to the age input don't affect the user's name or city name. You can also see the previous and updated states in the console.This is the ideal way to update an object in state, especially when you're not updating all the properties.
+
+To update the remaining name and city properties, you can write them as separate setting functions and connect them to their respective inputs:
+
+const handleNameChange = (e) => {
+  setUser((prevUser) => ({
+    ...prevUser,
+    name: e.target.value,
+  }));
+};
+
+const handleCityChange = (e) => {
+  setUser((prevUser) => ({
+    ...prevUser,
+    city: e.target.value,
+  }));
+};
+Or you can combine them into a single setter function like this:
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setUser((prevUser) => ({
+    ...prevUser,
+    [name]: value,
+  }));
+};
+
+To make this work, each input field has to have a name attribute.
+
+Here's the full code now:
+import { useState } from "react";
+
+function Profile() {
+  const [user, setUser] = useState({ name: "John Doe", age: 31, city: "LA" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setUser((prevUser) => ({...prevUser, [name]: value}));
+  };
+
+  return (
+    <div>
+      <h1>User Profile</h1>
+      <p>Name: {user.name}</p>
+      <p>Age: {user.age}</p>
+      <p>City: {user.city}</p>
+
+      <h2>Update User Age </h2>
+      <input type="number" name="age" value={user.age} onChange={handleChange} />
+
+      <h2>Update User Name </h2>
+      <input type="text" name="name" value={user.name} onChange={handleChange} />
+
+      <h2>Update User City </h2>
+      <input type="text" name="city" value={user.city} onChange={handleChange} />
+    </div>
+  );
+}
+export default Profile;
