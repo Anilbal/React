@@ -61,3 +61,8 @@ const addItem = () => {
 
 [...prevItems, newItem] creates a new array by copying all items in the existing items array held in state, then adds newItem at the end, which increments the id and the item number.
 
+If you want to remove something from the array, you can use the filter() method, which returns a new array after filtering out whatever you want to remove:
+
+const removeItem = (id) => {
+  setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+};
