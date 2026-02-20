@@ -2,6 +2,8 @@ import { useState } from "react";
 
 export function ToggleApp() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const handleToggleVisibility = () => {};
   return (
     <div className="toggle-container">
       <button id="toggle-button">Message</button>
