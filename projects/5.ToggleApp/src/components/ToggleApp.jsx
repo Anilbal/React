@@ -7,12 +7,11 @@ export function ToggleApp() {
     setIsVisible(!isVisible);
   };
 
-  useEffect(() => {
-    handleToggleVisibility();
-  }, []);
   return (
     <div className="toggle-container">
-      <button id="toggle-button" onClick={handleToggleVisibility}>Message</button>
+      <button id="toggle-button" onClick={handleToggleVisibility}>
+        {isVisible ? "Hide" : "Show"} Message
+      </button>
       {isVisible && <p id="message">I love coding app!</p>}
     </div>
   );
