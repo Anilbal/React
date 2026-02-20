@@ -12,7 +12,7 @@ export function ToggleApp() {
   }, []);
   return (
     <div className="toggle-container">
-      <button id="toggle-button">Message</button>
+      <button id="toggle-button" onClick={handleToggleVisibility}>Message</button>
       {isVisible && <p id="message">I love coding app!</p>}
     </div>
   );
