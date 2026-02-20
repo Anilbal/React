@@ -4,13 +4,12 @@ export function ToggleApp() {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleToggleVisibility = () => {
-    console.log(isVisible)
-    setIsVisible(!isVisible)
+    setIsVisible(!isVisible);
   };
 
-  useEffect(()=>{
-    handleToggleVisibility()
-  },[])
+  useEffect(() => {
+    handleToggleVisibility();
+  }, []);
   return (
     <div className="toggle-container">
       <button id="toggle-button">Message</button>
