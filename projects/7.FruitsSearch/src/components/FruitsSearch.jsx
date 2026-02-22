@@ -9,7 +9,10 @@ export function FruitsSearch() {
       setResults([]);
       return;
     }
-    const timeoutId = setTimeout(() => {}, 700);
+    const timeoutId = setTimeout(async () => {
+      try {
+      } catch {}
+    }, 700);
   }, []);
 
   // form submit logic
