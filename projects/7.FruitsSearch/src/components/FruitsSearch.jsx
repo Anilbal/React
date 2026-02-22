@@ -9,6 +9,7 @@ export function FruitsSearch() {
       setResults([]);
       return;
     }
+    const timeoutId = setTimeout(() => {}, 700);
   }, []);
 
   // form submit logic
