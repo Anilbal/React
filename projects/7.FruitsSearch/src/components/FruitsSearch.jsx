@@ -7,7 +7,7 @@ export function FruitsSearch() {
     <div id="search-container">
       <form>
         <label htmlFor="search-input">Search For Fruits:</label>
-        <input type="search" id="search-input" />
+        <input type="search" id="search-input" value={query} />
       </form>
     </div>
   );
