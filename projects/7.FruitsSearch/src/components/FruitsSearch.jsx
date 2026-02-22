@@ -20,7 +20,10 @@ export function FruitsSearch() {
         console.error(error);
       }
     }, 700);
-  }, []);
+
+    // cleanup
+    return () => clearTimeout(timeoutId);
+  }, [query]);
 
   // form submit logic
   const handleSubmit = (e) => {
@@ -39,7 +42,11 @@ export function FruitsSearch() {
       </form>
       <div id="results">
         {results.length > 0 ? (
-          results.map((result) => <p className="result-item">{result}</p>)
+          results.map((result) => (
+            <p className="result-item" key={result}>
+              {result}
+            </p>
+          ))
         ) : (
           <p>No result found</p>
         )}
