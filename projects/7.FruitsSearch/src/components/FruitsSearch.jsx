@@ -10,7 +10,7 @@ export function FruitsSearch() {
   };
   return (
     <div id="search-container">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="search-input">Search For Fruits:</label>
         <input
           type="search"
