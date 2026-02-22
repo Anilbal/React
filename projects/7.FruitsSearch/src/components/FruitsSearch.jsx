@@ -19,7 +19,15 @@ export function FruitsSearch() {
           onChange={(e) => setQuery(e.target.value)}
         />
       </form>
-      <div id="results"></div>
+      <div id="results">
+        {
+          results.length>0?
+          results.map((result)=>(
+            <p className="result-item">{result}</p>
+          )):
+          <p>No result found</p>
+        }
+      </div>
     </div>
   );
 }
