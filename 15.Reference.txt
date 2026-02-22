@@ -52,7 +52,7 @@ All the handleFocus function does is call the focus() method on the input elemen
 
 Here are some best practices you should be aware of while working with refs:
 
-Use refs mainly to interact with the DOM. You can also use them for mutable data, but state is a better choice for that.
+Use refs mainly to interact with the DOM. You can also use them for mutable data, but state is a better choice for that.  
 
 Don't use refs for basic state management – that is what useState is for.
 
