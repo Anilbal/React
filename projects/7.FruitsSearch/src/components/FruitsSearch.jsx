@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function FruitsSearch() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
+  useEffect(() => {
+
+  }, []);
+  
   // form submit logic
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,13 +24,11 @@ export function FruitsSearch() {
         />
       </form>
       <div id="results">
-        {
-          results.length>0?
-          results.map((result)=>(
-            <p className="result-item">{result}</p>
-          )):
+        {results.length > 0 ? (
+          results.map((result) => <p className="result-item">{result}</p>)
+        ) : (
           <p>No result found</p>
-        }
+        )}
       </div>
     </div>
   );
