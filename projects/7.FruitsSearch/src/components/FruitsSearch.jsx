@@ -19,6 +19,7 @@ export function FruitsSearch() {
           onChange={(e) => setQuery(e.target.value)}
         />
       </form>
+      <div id="results"></div>
     </div>
   );
 }
