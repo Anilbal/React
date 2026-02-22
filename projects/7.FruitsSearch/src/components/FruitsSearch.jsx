@@ -14,6 +14,7 @@ export function FruitsSearch() {
         const response = await fetch(
           `https://fruit-search.freecodecamp.rocks/api/fruits?q=${query}`,
         );
+        const data = await response.json();
       } catch {}
     }, 700);
   }, []);
