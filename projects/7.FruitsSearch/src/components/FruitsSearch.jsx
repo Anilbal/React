@@ -5,9 +5,12 @@ export function FruitsSearch() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-
+    if (query.trim() === "") {
+      setResults([]);
+      return;
+    }
   }, []);
-  
+
   // form submit logic
   const handleSubmit = (e) => {
     e.preventDefault();
