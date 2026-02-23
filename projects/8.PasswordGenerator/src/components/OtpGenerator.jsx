@@ -35,8 +35,16 @@ export const OtpGenerator = () => {
   return (
     <div className="container">
       <h1 id="otp-title">OTP Generator</h1>
-      <h2 id="otp-display">Click 'Generate OTP' to get a code</h2>
-      <p id="otp-timer" aria-live="polite"></p>
+      <h2 id="otp-display">
+        {otp && timeLeft > 0 ? otp : "Click 'Generate OTP' to get a code"}
+      </h2>
+      <p id="otp-timer" aria-live="polite">
+        {timeLeft > 0
+          ? `Expires in: ${timeLeft} seconds`
+          : timeLeft === 0 && otp
+            ? "OTP expired. Click the button to generate a new OTP."
+            : ""}
+      </p>
       <button id="generate-otp-button">Generate OTP</button>
     </div>
   );
