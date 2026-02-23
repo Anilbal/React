@@ -30,7 +30,7 @@ export const OtpGenerator = () => {
         timerRef.current = null;
       }
     };
-  }, []);
+  }, [timeLeft]);
 
   return (
     <div className="container">
@@ -45,7 +45,7 @@ export const OtpGenerator = () => {
             ? "OTP expired. Click the button to generate a new OTP."
             : ""}
       </p>
-      <button id="generate-otp-button">Generate OTP</button>
+      <button id="generate-otp-button" onClick={generateOTP}>Generate OTP</button>
     </div>
   );
 };
