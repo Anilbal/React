@@ -13,3 +13,7 @@ async function submitForm(formData) {
   const name = formData.get("name");
   return { message: `Hello, ${name}!` };
 }
+
+This server action extracts a name field from a form and returns a string greeting that name.
+
+To simplify state management for server actions and remove the need for client-side JavaScript for simple forms, the React team introduced the useActionState hook in version 19.
