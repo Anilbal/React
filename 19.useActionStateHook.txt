@@ -5,3 +5,11 @@ From that version onwards, server components became the default in frameworks li
 
 Server actions on the other hand, are functions that run on the server to allow form handling right on the server without the need for API endpoints.
 
+A server action looks like this:
+
+"use server";
+
+async function submitForm(formData) {
+  const name = formData.get("name");
+  return { message: `Hello, ${name}!` };
+}
