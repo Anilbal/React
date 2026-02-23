@@ -5,8 +5,33 @@ export const OtpGenerator = () => {
   const [timeLeft, setTimeLeft] = useState(0);
   const timerRef = useRef(null);
 
-  useEffect(() => {}, []);
-  
+  //generate opt
+  const generateOTP = () => {
+    const newOtp = Math.floor(100000 + Math.random() * 900000).toString();
+    setOtp(newOtp);
+    setTimeLeft(5);
+  };
+
+  useEffect(() => {
+    if (timeLeft > 0 && !timerRef.current) {
+      timerRef.current = setInterval(() => {
+        setTimeLeft((prev) => prev - 1);
+      }, 1000);
+    }
+
+    if (timeLeft === 0 && timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, []);
+
   return (
     <div className="container">
       <h1 id="otp-title">OTP Generator</h1>
