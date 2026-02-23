@@ -1,3 +1,7 @@
 What Is the useActionState Hook, and How Does It Work?
 React 19 came with two notable new features called server components and server actions. 
 
+From that version onwards, server components became the default in frameworks like Next.js that readily support them.
+
+Server actions on the other hand, are functions that run on the server to allow form handling right on the server without the need for API endpoints.
+
