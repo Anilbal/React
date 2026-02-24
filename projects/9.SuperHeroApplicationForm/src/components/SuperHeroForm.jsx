@@ -30,6 +30,10 @@ export const SuperHeroForm = () => {
             />
           </label>
         </div>
+        <label className="section column">
+          How did you get your powers?
+          <select></select>
+        </label>
       </form>
     </div>
   );
