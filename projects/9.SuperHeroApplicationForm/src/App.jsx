@@ -1,7 +1,8 @@
 import "./App.css";
+import { SuperHeroForm } from "./components/SuperHeroForm";
 
 function App() {
-  return <></>;
+  return <SuperHeroForm />;
 }
 
 export default App;
