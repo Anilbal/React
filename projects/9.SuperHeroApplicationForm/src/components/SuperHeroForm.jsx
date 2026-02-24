@@ -13,7 +13,11 @@ export const SuperHeroForm = () => {
         <div className="section">
           <label>
             Hero Name
-            <input type="text" value={heroName} />
+            <input
+              type="text"
+              value={heroName}
+              onChange={(e) => setHeroName(e.target.value)}
+            />
           </label>
         </div>
       </form>
