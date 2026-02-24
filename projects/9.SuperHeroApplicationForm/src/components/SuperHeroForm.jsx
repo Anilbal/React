@@ -5,6 +5,7 @@ export const SuperHeroForm = () => {
   const [realName, setRealName] = useState("");
   const [powerSource, setPowerSource] = useState("");
   const [powers, setPowers] = useState([]);
+  
   return (
     <div className="form-wrap">
       <h2>Superhero Application Form</h2>
