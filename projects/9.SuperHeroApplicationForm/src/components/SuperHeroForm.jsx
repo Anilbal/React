@@ -32,7 +32,15 @@ export const SuperHeroForm = () => {
         </div>
         <label className="section column">
           How did you get your powers?
-          <select></select>
+          <select>
+            <option value="">Select one</option>
+            <option value="">Bitten by a strange creature</option>
+            <option value="">Radioactive exposure</option>
+            <option value="">Science experiment</option>
+            <option value="">Alien heritage</option>
+            <option value="">Ancient artifact discovery</option>
+            <option value="">Other</option>
+          </select>
         </label>
       </form>
     </div>
