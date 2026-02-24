@@ -10,7 +10,12 @@ export const SuperHeroForm = () => {
       <h2>Superhero Application Form</h2>
       <p>Please complete all fields</p>
       <form>
-        <div className="section"></div>
+        <div className="section">
+          <label>
+            Hero Name
+            <input type="text" value={heroName} />
+          </label>
+        </div>
       </form>
     </div>
   );
