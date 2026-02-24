@@ -19,6 +19,14 @@ export const SuperHeroForm = () => {
               onChange={(e) => setHeroName(e.target.value)}
             />
           </label>
+          <label>
+            Real Name
+            <input
+              type="password"
+              value={realName}
+              onChange={(e) => setRealName(e.target.value)}
+            />
+          </label>
         </div>
       </form>
     </div>
