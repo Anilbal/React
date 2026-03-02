@@ -24,6 +24,9 @@ export const SuperHeroForm = () => {
   const [powerSource, setPowerSource] = useState("");
   const [powers, setPowers] = useState([]);
 
+  const handlePowerChange = (e) => {
+    const { value, checked } = e.target;
+  };
   return (
     <div className="form-wrap">
       <h2>Superhero Application Form</h2>
