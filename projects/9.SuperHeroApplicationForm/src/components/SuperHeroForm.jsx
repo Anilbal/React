@@ -26,6 +26,7 @@ export const SuperHeroForm = () => {
 
   const handlePowerChange = (e) => {
     const { value, checked } = e.target;
+    setPowers(checked ? [...powers, value] : powers.filter((p) => p !== value));
   };
   return (
     <div className="form-wrap">
