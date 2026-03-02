@@ -33,7 +33,10 @@ export const SuperHeroForm = () => {
       <h2>Superhero Application Form</h2>
       <p>Please complete all fields</p>
 
-      <form>
+      <form
+        method="post"
+        action={"https://superhero-application-form.freecodecamp.org"}
+      >
         <div className="section">
           <label>
             Hero Name
