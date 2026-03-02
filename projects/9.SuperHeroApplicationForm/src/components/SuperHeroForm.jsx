@@ -83,7 +83,15 @@ export const SuperHeroForm = () => {
             </label>
           ))}
         </label>
-        <button type="submit" className="submit-btn">Join the League</button>
+        <button
+          type="submit"
+          className="submit-btn"
+          disabled={
+            !realName || !heroName || !powerSource || powers.length === 0
+          }
+        >
+          Join the League
+        </button>
       </form>
     </div>
   );
