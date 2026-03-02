@@ -46,12 +46,15 @@ export const SuperHeroForm = () => {
             onChange={(e) => setPowerSource(e.target.value)}
           >
             <option value="">Select one</option>
-            {
-              powerSourceOptions.map(source=>(
-                <option value={source} key={source}>{source}</option>
-              ))
-            }
+            {powerSourceOptions.map((source) => (
+              <option value={source} key={source}>
+                {source}
+              </option>
+            ))}
           </select>
+        </label>
+        <label className="section column">
+          List your powers (select all that apply):
         </label>
       </form>
     </div>
