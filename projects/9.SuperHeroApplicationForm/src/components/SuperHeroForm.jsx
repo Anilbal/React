@@ -10,6 +10,15 @@ export const SuperHeroForm = () => {
     "Other",
   ];
 
+  const powersOptions = [
+    "Super Strength",
+    "Super Speed",
+    "Flight",
+    "Invisibility",
+    "Telekinesis",
+    "Other",
+  ];
+
   const [heroName, setHeroName] = useState("");
   const [realName, setRealName] = useState("");
   const [powerSource, setPowerSource] = useState("");
@@ -55,6 +64,9 @@ export const SuperHeroForm = () => {
         </label>
         <label className="section column">
           List your powers (select all that apply):
+          {powersOptions.map(power => (
+            <label key={power}>Hello</label>
+          ))}
         </label>
       </form>
     </div>
