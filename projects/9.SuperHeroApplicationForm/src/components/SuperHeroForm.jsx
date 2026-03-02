@@ -64,9 +64,14 @@ export const SuperHeroForm = () => {
         </label>
         <label className="section column">
           List your powers (select all that apply):
-          {powersOptions.map(power => (
+          {powersOptions.map((power) => (
             <label key={power}>
-              <input type="checkbox" value={power} />
+              <input
+                type="checkbox"
+                value={power}
+                checked={powers.includes(power)}
+                onChange={handlePowerChange}
+              />
               <span>{power}</span>
             </label>
           ))}
