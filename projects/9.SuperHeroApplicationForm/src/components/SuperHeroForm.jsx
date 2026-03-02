@@ -1,6 +1,15 @@
 import { useState } from "react";
 
 export const SuperHeroForm = () => {
+  const powerSourceOptions = [
+    "Bitten by a strange creature",
+    "Radioactive exposure",
+    "Science experiment",
+    "Alien heritage",
+    "Ancient artifact discovery",
+    "Other",
+  ];
+
   const [heroName, setHeroName] = useState("");
   const [realName, setRealName] = useState("");
   const [powerSource, setPowerSource] = useState("");
@@ -37,6 +46,11 @@ export const SuperHeroForm = () => {
             onChange={(e) => setPowerSource(e.target.value)}
           >
             <option value="">Select one</option>
+            {
+              powerSourceOptions.map(source=>(
+                <option value={source} key={source}>{source}</option>
+              ))
+            }
           </select>
         </label>
       </form>
