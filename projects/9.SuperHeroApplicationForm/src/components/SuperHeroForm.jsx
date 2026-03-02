@@ -83,6 +83,7 @@ export const SuperHeroForm = () => {
             </label>
           ))}
         </label>
+        <button type="submit" className="submit-btn">Join the League</button>
       </form>
     </div>
   );
